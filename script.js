@@ -1,6 +1,6 @@
 // Configuration
 const CONFIG = {
-    apiKey: '59bf01db-627f-4669-80a4-3c9eea1a3f5',
+    apiKey: '59bf01db-627f-4669-80a4-3c9eea1a3f5d',
     apiUrl: null, // Will be set based on the service
     maxTokens: 500,
     temperature: 0.7
@@ -408,4 +408,5 @@ apiModal.addEventListener('click', function(e) {
     if (e.target === apiModal) {
         toggleApiSettings();
     }
+
 });
