@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepSeek AI Chat - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1><i class="fas fa-robot"></i> DeepSeek AI Chat</h1>
+            <p>Powered by DeepSeek API | Real AI Intelligence</p>
+        </div>
+    </header>
+
+    <!-- API Status -->
+    <div class="api-status connected">
+        <i class="fas fa-circle"></i>
+        <span>✅ DeepSeek API Connected - Ready to Chat</span>
+    </div>
+
+    <!-- Chat Container -->
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="chat-title">
+                <i class="fas fa-comments"></i>
+                <span>DeepSeek AI Assistant</span>
+            </div>
+            <button class="clear-chat" onclick="clearChat()">
+                <i class="fas fa-trash"></i> Clear Chat
+            </button>
+        </div>
+
+        <!-- Chat Messages -->
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <div class="message-text">
+                        Namaste! 👋 I'm your DeepSeek AI assistant. 
+                        <br><br>
+                        I can help you with:
+                        <br>• Answering complex questions
+                        <br>• Programming and coding
+                        <br>• Content writing
+                        <br>• Problem solving
+                        <br>• Research and analysis
+                        <br>• Creative tasks
+                        <br><br>
+                        Ask me anything - I'm powered by real AI!
+                    </div>
+                    <div class="message-time" id="currentTime"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Typing Indicator -->
+        <div class="typing-indicator" id="typingIndicator">
+            <div class="typing-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <span>DeepSeek AI is thinking...</span>
+        </div>
+
+        <!-- Chat Input -->
+        <div class="chat-input-container">
+            <div class="chat-input-wrapper">
+                <textarea 
+                    id="messageInput" 
+                    placeholder="Ask anything to DeepSeek AI... (Press Enter to send)" 
+                    rows="1"
+                    onkeydown="handleKeyDown(event)"
+                ></textarea>
+                <button id="sendButton" onclick="sendMessage()">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+            <div class="chat-suggestions">
+                <button class="suggestion-btn" onclick="quickQuestion('Explain quantum computing in simple terms')">
+                    ⚛️ Quantum Computing
+                </button>
+                <button class="suggestion-btn" onclick="quickQuestion('Write a Python function to calculate factorial')">
+                    🐍 Python Code
+                </button>
+                <button class="suggestion-btn" onclick="quickQuestion('What is the future of artificial intelligence?')">
+                    🤖 AI Future
+                </button>
+                <button class="suggestion-btn" onclick="quickQuestion('How to learn machine learning step by step?')">
+                    🧠 Learn ML
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 DeepSeek AI Chat | Powered by DeepSeek API | Deployed on GitHub Pages</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
