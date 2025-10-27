@@ -1,6 +1,6 @@
 // DeepSeek API Configuration
 const DEEPSEEK_CONFIG = {
-    apiKey: 'sk-36ed5e4b24d848869eafdc3774d347e2', // Your DeepSeek API Key
+    apiKey: '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', // Your DeepSeek API Key
     apiUrl: 'https://api.deepseek.com/v1/chat/completions', // DeepSeek API Endpoint
     model: 'deepseek-chat', // DeepSeek model name
     maxTokens: 1000,
@@ -290,4 +290,5 @@ function loadChatHistory() {
 }
 
 // Event Listeners
+
 messageInput.addEventListener('input', adjustTextareaHeight);
